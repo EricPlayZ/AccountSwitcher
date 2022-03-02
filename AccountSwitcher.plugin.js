@@ -115,7 +115,7 @@ module.exports = (() => {
 				);
 			}
 			
-			const KeyRecorder = class KeyRecorder extends WebpackModules.getByDisplayName("KeyRecorder") {
+			/*const KeyRecorder = class KeyRecorder extends WebpackModules.getByDisplayName("KeyRecorder") {
 				render() {
 					const ButtonOptions = WebpackModules.getByProps("ButtonLink");
 					const Button = ButtonOptions.default;
@@ -167,7 +167,7 @@ module.exports = (() => {
 						onRemove
 					});
 				}
-			};
+			};*/
 			return class AccountSwitcher extends Plugin {
 				updateAvatars(){
 					this.settings.accounts.forEach(acc => {
@@ -287,7 +287,7 @@ module.exports = (() => {
 								this.saveSettings();
 								Toasts.show("Account " + account.name + " removed", {type: Toasts.ToastTypes.success});
 							}
-						}, "⨯")
+						}, "тип")
 					);
 					if(this.settings.accounts.length > 0){
 						const offset = DOMTools.offset(e.target);
@@ -354,7 +354,7 @@ module.exports = (() => {
 							this.registerKeybind(acc);
 							return addAccount(acc);
 						}
-						const kbPanel = new Keybind(account, keybind => {
+						/*const kbPanel = new Keybind(account, keybind => {
 							this.unregisterKeybind(account);
 							account.keybind = keybind;
 							this.saveSettings();
@@ -366,7 +366,7 @@ module.exports = (() => {
 							// TODO: remove account from DOM so you are not required to repopen the settings
 							Toasts.show("Account " + account.name + " got removed. After reopening the settings it will also be gone from this list.", {type: Toasts.ToastTypes.success});                        
 						});
-						accountsField.append(kbPanel);
+						accountsField.append(kbPanel);*/
 					};
 					const addAccountButton = document.createElement("button");
 					// TODO: remove hardcoded classes
